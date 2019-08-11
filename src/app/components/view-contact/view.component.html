@@ -1,0 +1,17 @@
+<div class="row">
+  <div class="col-6 edit-contact">
+    <div *ngIf="contact.name!=''; else elseBlock" >
+        <h3>{{contact.name}}</h3>
+        <ul>
+          <li>Name : {{contact.name}}</li>
+          <li>Email : {{contact.email}}</li>
+          <li>Address : {{contact.address.street}}, {{contact.address.suite}}, {{contact.address.city}}</li>
+          <li>Zipcode : {{contact.address.zipcode}}</li>
+          <li>Phone: {{contact.phone}}</li>
+        </ul>
+        {{contact | json}}
+    </div>
+    <ng-template #elseBlock>No details back to Home page. </ng-template>
+    <a class="homeBtn" [routerLink]="[ '/contacts']"> Home </a>
+  </div> 
+</div>

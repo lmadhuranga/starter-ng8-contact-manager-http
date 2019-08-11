@@ -8,8 +8,8 @@ import { ContactsService } from '../../services/contacts.service';
 
 @Component({
   selector: 'app-contacts',
-  templateUrl: './contacts.component.html',
-  styleUrls: ['./contacts.component.scss']
+  templateUrl: './list.component.html',
+  styleUrls: ['./list.component.scss']
 })
 export class ContactsComponent implements OnInit {
   contacts:Contact[] = [];

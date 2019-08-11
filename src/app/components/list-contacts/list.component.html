@@ -1,22 +1,20 @@
-<div id="accordion" class="movies-list">
-  <div class="card movie" *ngFor="let movie of movies" attr.id="movie{{movie.id}}">
+<div id="accordion" class="contacts-list">
+  <div class="card contact" *ngFor="let contact of contacts" attr.id="contact{{contact.id}}">
     <div class="card-header" >
       <h5 class="mb-0">
-        <button class="btn btn-link movie-name-link" href="javascript:void(0)" 
-        (click)="details(movie)" data-toggle="collapse" data-target="#collapseOne" 
-        aria-expanded="true" aria-controls="collapseOne">{{movie.name}} |-> Views: {{movie.downloads}}</button>
+        <button class="btn btn-link contact-name-link" href="javascript:void(0)" 
+        (click)="details(contact)" data-toggle="collapse" data-target="#collapseOne" 
+        aria-expanded="true" aria-controls="collapseOne">{{contact.name}} </button>
       </h5>
     </div>
 
-    <div id="collapseOne" class="collapse show movie-details" *ngIf="movie.details" aria-labelledby="headingOne" data-parent="#accordion">
+    <div id="collapseOne" class="collapse show contact-details" *ngIf="contact.details" aria-labelledby="headingOne" data-parent="#accordion">
       <div class="card-body">
-        Number Downloads : {{movie.downloads}} <br>
-        Path -> 
-          &nbsp;<a class="movie-path" href="{{movie.path}}">{{movie.path}}</a> <br>          
-          <a class="editBtn" id="movieEditBtn{{movie.id}}" [routerLink]="[ '/edit', movie.id ]">
-            Edit
-          </a> |
-          <a class="removeBtn" id="movieRmBtn{{movie.id}}" href="javascript:void(0)" (click)="remove(movie)">
+        Email -> 
+          &nbsp;<a class="contact-email" href="{{contact.email}}">{{contact.email}}</a> <br>          
+          <a class="viewBtn" id="contactEditBtn{{contact.id}}" [routerLink]="[ '/view', contact.id ]"> View </a> |
+          <a class="editBtn" id="contactEditBtn{{contact.id}}" [routerLink]="[ '/edit', contact.id ]"> Edit </a> |
+          <a class="removeBtn" id="contactRmBtn{{contact.id}}" href="javascript:void(0)" (click)="remove(contact)">
             Remove
           </a>
       </div>
