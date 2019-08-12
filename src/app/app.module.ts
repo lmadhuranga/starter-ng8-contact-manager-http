@@ -4,7 +4,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
+import { AppComponent } from './pages/main-page/app.component';
 import { ContactsComponent } from './pages/list-contacts/list.component'
 import { ViewContactComponent } from './pages/view-contact/view.component'
 import { EditContactComponent } from './pages/edit-contact/edit.component'
