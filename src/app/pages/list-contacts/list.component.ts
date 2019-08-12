@@ -28,9 +28,11 @@ export class ContactsComponent implements OnInit {
   }
   
   remove(contact:Contact){
-    this.contactService.delete(contact.id).subscribe((res) => {
-      this.listAll();
-    });
+    if(confirm("Are you sure to delete this")) { 
+      this.contactService.delete(contact.id).subscribe((res) => {
+        this.listAll();
+      });
+    } 
   }
   
   details(contact){

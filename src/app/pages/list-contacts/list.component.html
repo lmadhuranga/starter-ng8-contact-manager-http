@@ -1,18 +1,18 @@
 <div id="contact-list" class="contacts-list"> 
-  <table class="tabel">
+    <table class="table table-striped">
     <thead>
       <tr>
-        <th>Name</th>
-        <th>Action</th>
+        <th scope="col">Name</th>
+        <th scope="col">Action</th>
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let contact of contacts" attr.id="contact{{contact.id}}">
+      <tr scope="col" *ngFor="let contact of contacts" attr.id="contact{{contact.id}}">
         <td><app-contact-name [contact]="contact"></app-contact-name></td>
         <td>
-            <a class="viewBtn" id="contactEditBtn{{contact.id}}" [routerLink]="[ '/view', contact.id ]"> View </a> |
-            <a class="editBtn" id="contactEditBtn{{contact.id}}" [routerLink]="[ '/edit', contact.id ]"> Edit </a> |
-            <a class="removeBtn" id="contactRmBtn{{contact.id}}" href="javascript:void(0)" (click)="remove(contact)">Remove </a>
+            <a class="viewBtn" id="contactEditBtn{{contact.id}}" [routerLink]="[ '/view', contact.id ]"> <i class="fas fa-eye"></i> </a> |
+            <a class="editBtn" id="contactEditBtn{{contact.id}}" [routerLink]="[ '/edit', contact.id ]"> <i class="fas fa-edit"></i> </a> |
+            <a class="removeBtn" id="contactRmBtn{{contact.id}}" href="javascript:void(0)" (click)="remove(contact)"><i class="fas fa-trash-alt"></i></a>
         </td>
       </tr>
     </tbody>

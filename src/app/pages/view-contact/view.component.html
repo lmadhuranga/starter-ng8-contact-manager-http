@@ -8,10 +8,8 @@
           <li>Address : {{contact.address.street}}, {{contact.address.suite}}, {{contact.address.city}}</li>
           <li>Zipcode : {{contact.address.zipcode}}</li>
           <li>Phone: {{contact.phone}}</li>
-        </ul>
-        {{contact | json}}
+        </ul> 
     </div>
-    <ng-template #elseBlock>No details back to Home page. </ng-template>
-    <a class="homeBtn" [routerLink]="[ '/contacts']"> Home </a>
+    <ng-template #elseBlock>No details back to Home page. </ng-template> 
   </div> 
 </div>

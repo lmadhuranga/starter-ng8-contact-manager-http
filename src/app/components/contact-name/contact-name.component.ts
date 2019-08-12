@@ -12,7 +12,7 @@ export class ContactNameComponent implements OnInit {
   }
 
   ngOnInit() {
-    console.log('contact name', this.contact)
+    // console.log('contact name', this.contact)
   }
 
 }
