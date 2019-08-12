@@ -1,4 +1,4 @@
-<div id="accordion" class="contacts-list">
+<div id="accordion" class="contacts-list"> 
   <div class="card contact" *ngFor="let contact of contacts" attr.id="contact{{contact.id}}">
     <div class="card-header" >
       <h5 class="mb-0">
@@ -10,8 +10,9 @@
 
     <div id="collapseOne" class="collapse show contact-details" *ngIf="contact.details" aria-labelledby="headingOne" data-parent="#accordion">
       <div class="card-body">
+        <app-contact-name [contact]="contact"></app-contact-name>
         Email -> 
-          &nbsp;<a class="contact-email" href="{{contact.email}}">{{contact.email}}</a> <br>          
+          &nbsp;<a class="contact-email" href="mailto:{{contact.email}}">{{contact.email}}</a> <br>          
           <a class="viewBtn" id="contactEditBtn{{contact.id}}" [routerLink]="[ '/view', contact.id ]"> View </a> |
           <a class="editBtn" id="contactEditBtn{{contact.id}}" [routerLink]="[ '/edit', contact.id ]"> Edit </a> |
           <a class="removeBtn" id="contactRmBtn{{contact.id}}" href="javascript:void(0)" (click)="remove(contact)">

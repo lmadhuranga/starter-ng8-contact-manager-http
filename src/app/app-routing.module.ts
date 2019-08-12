@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { ContactsComponent } from './components/list-contacts/list.component'
-import { EditContactComponent } from './components/edit-contact/edit.component'
-import { ViewContactComponent } from './components/view-contact/view.component'
+import { ContactsComponent } from './pages/list-contacts/list.component'
+import { EditContactComponent } from './pages/edit-contact/edit.component'
+import { ViewContactComponent } from './pages/view-contact/view.component'
 
 const routes: Routes = [
   { path:"", redirectTo:'contacts', pathMatch:'full' },

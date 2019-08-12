@@ -4,7 +4,7 @@
         <h3>{{contact.name}}</h3>
         <ul>
           <li>Name : {{contact.name}}</li>
-          <li>Email : {{contact.email}}</li>
+          <li>Email : <a href="mailto:{{contact.email}}">{{contact.email}}</a></li>
           <li>Address : {{contact.address.street}}, {{contact.address.suite}}, {{contact.address.city}}</li>
           <li>Zipcode : {{contact.address.zipcode}}</li>
           <li>Phone: {{contact.phone}}</li>

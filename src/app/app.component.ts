@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { appConfig } from '../config/globel.conf';
+import { appConfig } from './config/globel.conf';
 import { Title } from '@angular/platform-browser';
 
 @Component({

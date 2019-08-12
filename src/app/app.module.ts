@@ -4,19 +4,21 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './components/app.component';
-import { ContactsComponent } from './components/list-contacts/list.component'
-import { ViewContactComponent } from './components/view-contact/view.component'
-import { EditContactComponent } from './components/edit-contact/edit.component'
+import { AppComponent } from './app.component';
+import { ContactsComponent } from './pages/list-contacts/list.component'
+import { ViewContactComponent } from './pages/view-contact/view.component'
+import { EditContactComponent } from './pages/edit-contact/edit.component'
 
-import { ContactsService } from './services/contacts.service'
+import { ContactsService } from './services/contacts.service'; 
+import { ContactNameComponent } from './components/contact-name/contact-name.component'
 
 @NgModule({
   declarations: [
     AppComponent,
     ContactsComponent,
     EditContactComponent,
-    ViewContactComponent
+    ViewContactComponent, 
+    ContactNameComponent
   ],
   imports: [
     BrowserModule,
