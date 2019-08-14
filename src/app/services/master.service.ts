@@ -35,7 +35,7 @@ export class MasterService {
   
   // Update data
   update(formData) {      
-    let updateUrl = `${this.ajaxUrl}/${formData.id}`
+    let updateUrl = `${this.ajaxUrl}`
     return this.http.put(updateUrl, formData);
   }     
   

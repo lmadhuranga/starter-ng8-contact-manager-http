@@ -3,8 +3,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 
 
 import { ContactsService } from 'src/app/services/contacts.service';
-import { Contact } from '../../interfaces/contact'; 
-import { Quality } from 'src/app/interfaces/quality';
+import { Contact } from '../../interfaces/contact';  
 
 @Component({
   selector: 'app-view-contact',
@@ -13,8 +12,7 @@ import { Quality } from 'src/app/interfaces/quality';
 })
 export class ViewContactComponent implements OnInit {
   
-  contact:Contact;
-  qualities:Quality[];
+  contact:Contact; 
   
   constructor(
     private contactService:ContactsService,  
@@ -27,7 +25,7 @@ export class ViewContactComponent implements OnInit {
       this.contact = {
         name: '',
         email: '',
-        downloads: 0
+        mobile:''
       };
       
       this.route.params.subscribe((params)=>{

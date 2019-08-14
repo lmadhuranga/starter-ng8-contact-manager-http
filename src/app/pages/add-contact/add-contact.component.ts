@@ -26,8 +26,8 @@ export class AddContactComponent implements OnInit {
       // Set Defualt values
       this.contact = { 
         name:'',
-        downloads:0,
-        email:''
+        email: '',
+        mobile:'',
       };
        
     }
